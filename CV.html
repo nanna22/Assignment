@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <style>
+        
+        div#container {
+    padding: 50px;
+    margin-top: -50px;
+    border-style: double;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+    /*--The code creates and designs the border of the CV*/
+}
+
+    span{
+        float:right
+    }
+    </style>
+
+</head>
+<body>
+
+
+    <p>
+    <div id="container">
+        <div class="details">
+            <h2>
+                <center>
+                    <p id="name">NAME</p>
+                    <p id="Address">Postal Address</p>
+                    <p id="Tnumber">Telephone Number</p>
+                    <p id="Email">Email(s)</p>
+                    <br> 
+                    
+                </center>
+            </h2>
+             <!--The code displays the header of the CV (The details which are being filled in from the (CV) index.html form) -->
+           </div> 
+    
+           <div>
+               <br><b> OBJECTIVE <hr></b>
+               Seeking a challenging entry-level position in Sales and Marketing with considerable opportunities for growth.<br>
+             <!--The code displays the Objectives of the user -->
+           </div>
+    
+            <div>
+                <br><b>EDUCATION <hr></b>
+                <b>ASHESI UNIVERSITY COLLEGE<span><b>Accra, Greater Accra </b></span><br>
+                BSc. Business Administration      <span>August 2004 – May 2007</span>                                                                                     
+                    <ul>
+                        <li><b>Relevant Courses:</b> Social Theory  Entrepreneurship Marketing Competitive <br>Strategy Development
+                            Economics Investment Human Resource Management </li>
+                    </ul>
+                 <!--The code displays the educational backgrounds and pursuits of the user -->
+            </div>
+    
+    
+            <div>
+                <br><b> ACHIEVEMENTS/ AWARDS </b><hr>
+                Dean's list 2004 <br> 
+                <!--The code displays the achievements and awards -->
+            </div>
+    
+    
+            <div>
+                <br><b> WORK EXPERIENCE <hr></b>
+                <b>Summer Intern, ABC Limited</b>                                                 <span><b>Accra, Greater Accra </b></span><br><span>July – Aug, 2007 </span>
+                    <ul>
+                        <li> Prepared financial valuations and modeling for Access Bank, Nigeria</li>         
+                        <li> Prepared 5-year financial projections for Access Bank, Nigeria</li> 
+                        <li> Prepared business summary for a Business Plan for funding</li> 
+                        <li> Prepared a seven page research report on the bank</li> 
+                    </ul>
+    
+    
+     
+                    <br><b>President, ARM </b>                                                                     <span><b>Accra, Greater Accra </b></span><br><span>Dec.  2006 –present</span> 
+                    <ul>
+                        <li> Managed club and presided over club activities and Editorial Meetings.</li>          
+                        <li> Organized seminars involving key figures at Ashesi to dialogue on the role of leadership in Africa.</li> 
+                        <li> Liaised with visiting key personalities for seminars and events</li> 
+                        <li> Increased membership and developed club programs by 22% and 40% respectively</li> 
+                    </ul>
+                    
+                    <br><b>Marketing Executive, Crisps Radio, Tamale.</b>                                       <span><b>Accra, Greater Accra </b></span><br><span>June – August 2005</span>   
+                    <ul>
+                        <li> Assisted the Marketing Manager to expand the market share of company.</li>          
+                        <li> Wrote jingles, Live Presenter Mentions (LPMs) and promotional announcements.</li> 
+                        <li> Produced an elite talk show dubbed (Excellent Talk with Excellent Personalities)</li> 
+                        <li> Wrote proposals for live programs, promotions and adverts for products and companies.</li> 
+                    </ul>
+                    <!--The code displays the work experiences of the user
+                    (li) lists the activities under each heading.
+                    (span and float) justifies the text to the right 
+                    (UL) orderes the list-->
+            </div>
+    
+            <div>
+                <b>OTHER SKILLS <hr></b>                    
+                Communication- Brief description<br>
+                Computer- State key components <br>
+                Mention specific leadership roles and accomplishment<br> 
+                <!--The code displays the other skills of the User -->
+            </div>
+    
+            <div>
+                <br><b> CO-CURICCULAR ACTIVITIES <hr></b>
+                    Clubs etc<br>
+                    <!--The code displays the CO-Curiccular activities-->
+            </div> 
+    
+            <div>
+                <br><b> REFERENCES <hr></b>
+                Available Upon Request <br>
+                <!--The code displays the references -->
+            </div>
+    </div>
+    </p> 
+
+
+    <script>
+
+        firstName = localStorage.getItem("First Name");
+        MiddleName = localStorage.getItem("Middle Name");
+        LastName = localStorage.getItem("Last Name");
+        Gender = localStorage.getItem("Gender");
+        Number = localStorage.getItem("Telephone Number");
+        Email = localStorage.getItem("Email");
+        address = localStorage.getItem("Postal Address");
+
+        document.getElementById("name").innerHTML = firstName + " " + MiddleName + " " + LastName;
+        document.getElementById("Address").innerHTML =address;
+        document.getElementById("Tnumber").innerHTML = Number;
+        document.getElementById("Email").innerHTML = Email;
+        
+    
+    </script>
+
+</body>
+</html>
+
+
