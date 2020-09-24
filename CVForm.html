@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>   
+    
+    <!--Nanna Oye Abankwa
+    502920221!-->
+    <div class="style">
+        
+    </div>
+
+<script>
+    const form = document.getElementById("hform");
+
+function SUBMITOPTION(){
+    return confirm("Submit form if all details are right");
+}
+
+function onSubmit(event){
+    event.preventDefault();
+
+    const fname = document.getElementById("fname");
+    localStorage.setItem("First Name", fname.value); 
+
+    const mname = document.getElementById("mname");
+    localStorage.setItem("Middle Name", mname.value); 
+
+    const lname = document.getElementById("lname");
+    localStorage.setItem("Last Name", lname.value); 
+
+    const gender = document.getElementById("gender");
+    localStorage.setItem("Gender", gender.value); 
+
+    const Tnumber = document.getElementById("Tnumber");
+    localStorage.setItem("Telephone Number", Tnumber.value); 
+
+    const email = document.getElementById("email");
+    localStorage.setItem("Email", email.value);
+
+    const Address = document.getElementById("Address");
+    localStorage.setItem("Postal Address", Address.value);
+
+    const name_format = /^[a-zA-Z].*[\s\.]*$/;
+    const number_format = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+    const email_format = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if(!name_format.test(fname.value)){
+        alert("Please enter your first name")
+    }
+
+    if(!name_format.test(lname.value)){
+        alert("Please enter your first name")
+    }
+
+    if(!name_format.test(email.value)){
+        alert("Please enter your first name")
+    }
+
+    if(!number_format.test(Tnumber.value)){
+        alert("Please enter your first name")
+    }
+
+    else{
+        location.href = "CV.html"
+    }    
+}        
+
+</script>
+
+<style>
+
+    div#center{
+        text-align: center;
+
+    }
+
+    #container{
+       /* background-image: url("ashesi.jpg");*/
+        text-align:center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 150px;
+        margin-right: 100px;
+        width: 70%;
+        border: 1px solid #73ad21;
+        padding: 10px;
+    }
+    
+    /*div#container {
+    padding: 50px;
+    margin-top: -50px;
+    border-style: double;
+
+    }*/
+
+
+
+</style>
+
+</head>
+
+
+
+
+<body style="background-image: url('NewAshesi.jpeg') ;">
+
+    <form  method = "get" id="hform">  
+
+    <div id= "container" style="background-color: aliceblue;">
+        <div id= "center">
+            <h2>
+                <i><b><font color= "#800000">Ashesi Curriculum Vitae Form</font></b></i>
+            </h2>
+        </div>
+
+    
+        <h3>Contact Details</h3>
+        
+        <div>
+            <label for ="fname">First Name:</label><br>
+            <input type = "text" name="First Name" id = "fname" required><br>
+            <!--The code enables the user to enter the first Name -->
+        </div>
+    
+        <div>
+            <label for ="Mname">Middle Name:</label><br>
+            <input type = "text" name="Middle Name" id = "mname"><br><br>
+                <!--The code enables the user to enter the Middle Name(optional) -->
+        </div>
+        
+        <div>
+            <label for ="lname">Last name:</label><br>
+            <input type = "text" name="Last Name" id = "lname" required><br><br>
+                <!--The code enables the user to enter the Last Name -->
+        </div>
+    
+        <div>
+            <label for ="gender">Select your gender:</label><br>
+            <select name="Gender" id="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+                <!--The code enables the user to enter the Gender -->
+        </div>
+    
+        <div>
+            <label for ="Tnumber">Telephone Number:</label><br>
+            <input type = "tel" name="Telephone Number"id = "Tnumber" required ><br><br>
+                <!--The code enables the user to enter the Telephone Number -->
+        </div>
+    
+        <div>  
+            <label for ="email"> Email:</label><br>
+            <input type ="email" name="Email" id= "email" placeholder="user@example.com" required><br><br>
+                <!--The code enables the user to enter the Email -->
+        </div>
+    
+        <div>
+            <label for ="Address">Postal Address:</label><br>
+            <textarea id="Address" name="Postal Address" required></textarea><br>
+                <!--The code enables the user to enter the Address -->
+        </div>
+    
+        <div>
+            <button type="reset">RESET</button>
+            <!--The code enables the user to Reset the page -->
+            <button type="submit" onclick="onSubmit(event)">SUBMIT</button>
+            <!--The code enables the user to enter the submit his details -->
+
+            
+        
+        </div>
+    
+    </div>
+</form>>
+
+
+</body>
+</html>
